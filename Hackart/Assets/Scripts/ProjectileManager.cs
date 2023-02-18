@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using System.Xml.Schema;
 using UnityEngine;
 
 public class ProjectileManager : MonoBehaviour
@@ -6,13 +7,17 @@ public class ProjectileManager : MonoBehaviour
      public int speed = 5;
      public float timer = 5;
      public GameObject projectile;
-     private GameObject projectileClone;
+     private GameObject projectileClone, newProjectClone;
      private Vector3 location;
      private GameObject[] projectiles;
+     public float minX, maxX;
+     public bool LHS;
  
-     void Start () 
+     void Start ()
      {
-        projectile = GameObject.Find("Projectile");   
+         name = LHS ? "Projectile LHS" : "Projectile RHS";
+         projectile = GameObject.Find(name);
+         // projectile = GameObject.Find("projectile");
      }
      
      void Update()
@@ -20,12 +25,12 @@ public class ProjectileManager : MonoBehaviour
          timer -= Time.deltaTime;
          if (timer <= 0f)
          {
-             location = new Vector3(Random.Range(-9, 0), -4, 0);
+             location = new Vector3(Random.Range(minX, maxX), -4, 0);
              projectileClone = Instantiate(projectile, location, transform.rotation);
+             CleanupProjectiles();
+             projectile = projectileClone;
              timer = 2f;
          }
-
-         CleanupProjectiles();
      }
 
      void CleanupProjectiles()
@@ -34,11 +39,10 @@ public class ProjectileManager : MonoBehaviour
          
          foreach (GameObject pj in projectiles)
          {
-             if (pj == projectile || pj.transform.position.y > -4.5)
+             if (pj.transform.position.y < -4.5)
              {
-                 continue;
+                 Destroy(pj);
              }
-             Destroy(pj);
          }
      }
  }

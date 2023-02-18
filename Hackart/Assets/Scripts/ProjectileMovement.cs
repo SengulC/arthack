@@ -7,12 +7,14 @@ public class ProjectileMovement : MonoBehaviour {
     public float speed = 10;
     private Vector3 targetPos;
     Vector3 startPos, currPos;
+    public bool LHS;
+    private float dist;
 	
     void Start() {
         startPos = transform.position;
         currPos = transform.position;
         // targetPos should be between the currPos' x and LHS (0)
-        targetPos = new Vector3(Random.Range(transform.position.x,0),Random.Range(-1,3), 0);
+        targetPos = new Vector3(Random.Range(transform.position.x,0),Random.Range(-2,5), 0);
     }
 	
     void Update() {
@@ -23,17 +25,15 @@ public class ProjectileMovement : MonoBehaviour {
         // Do something when we reach the target
         if (nextPos == targetPos)
         {
-            targetPos = new Vector3(transform.position.x+5, -5, 0);
+            if (LHS)
+                dist = 5;
+            else
+                dist = -5;
+            targetPos = new Vector3(transform.position.x+dist, -5, 0);
             nextPos = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
             // Rotate to face the next position, and then move there
             transform.rotation = LookAt2D(nextPos - transform.position);
             transform.position = nextPos;
-        }
-
-        if (nextPos == targetPos)
-        {
-            Debug.Log("destroying here");
-            // Destroy(gameObject);
         }
     }
 
