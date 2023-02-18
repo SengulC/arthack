@@ -27,7 +27,10 @@ public class ProjectileManager : MonoBehaviour
          {
              location = new Vector3(Random.Range(minX, maxX), -4, 0);
              projectileClone = Instantiate(projectile, location, transform.rotation);
-             CleanupProjectiles();
+             if (projectile.transform.position.y < -4.5)
+             {
+                 Destroy(projectile);
+             }
              projectile = projectileClone;
              timer = 2f;
          }
