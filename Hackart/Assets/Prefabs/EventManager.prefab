@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   splatterMaskObject: {fileID: 4094266689204011182, guid: c4c5c5f1dea633446a5c0f58b6e17f82, type: 3}
+  spiralBGObject: {fileID: 2356212922989089080, guid: 67807ec1a64dce047befa957b6146b6b, type: 3}

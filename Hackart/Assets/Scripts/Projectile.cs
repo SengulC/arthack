@@ -9,12 +9,31 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        DetermineProjectileCode();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void DetermineProjectileCode()
+    {
+        float rand = Random.Range(0, 10);
+        if (rand >= 7)
+        {
+            //spiralBG projectile
+            projectileCode = 1;
+            this.GetComponent<MeshRenderer>().material.color = Color.blue;
+        }
+        else
+        {
+            //paint projectile
+            projectileCode = 0;
+            this.GetComponent<MeshRenderer>().material.color = Color.red;
+        }
+
+        Debug.Log(rand);
     }
 }
