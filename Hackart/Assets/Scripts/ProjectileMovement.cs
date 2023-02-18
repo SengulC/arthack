@@ -14,19 +14,15 @@ public class ProjectileMovement : MonoBehaviour {
     }
 	
     void Update() {
-        // Compute the next position -- straight flight
         Vector3 nextPos = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-
-        // Rotate to face the next position, and then move there
         transform.rotation = LookAt2D(nextPos - startPos);
         transform.position = nextPos;
 		
         // Do something when we reach the target
         if (nextPos == targetPos)
         {
-            targetPos = new Vector3(transform.position.x+5, -100, 0);
+            targetPos = new Vector3(transform.position.x+5, -5, 0);
             nextPos = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-
             // Rotate to face the next position, and then move there
             transform.rotation = LookAt2D(nextPos - transform.position);
             transform.position = nextPos;
