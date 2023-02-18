@@ -7,6 +7,7 @@ public class Splatter : MonoBehaviour
     private SpriteMask spriteMask;
 
     public List<Sprite> maskSprites;
+    public SpriteRenderer childSpriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,9 @@ public class Splatter : MonoBehaviour
 
     void ChooseSplatter()
     {
-        spriteMask.sprite = maskSprites[Random.Range(0, maskSprites.Count)];
+        Sprite maskSprite = maskSprites[Random.Range(0, maskSprites.Count)];
+        spriteMask.sprite = maskSprite;
+        childSpriteRenderer.sprite = maskSprite;
     }
 
     void ChangeOrientation()
