@@ -9,6 +9,7 @@
 [Bb]uilds/
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
+.DS_Store
 
 
 # MemoryCaptures can get excessive in size.
@@ -77,3 +78,4 @@ crashlytics-build.properties
 
 # for github actions
 /artifacts
+Hackart/.DS_Store
