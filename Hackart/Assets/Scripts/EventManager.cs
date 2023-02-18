@@ -5,6 +5,7 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
     public GameObject splatterMaskObject;
+    public GameObject spiralBGObject;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,9 @@ public class EventManager : MonoBehaviour
             case 0:
                 SplatterMask(position);
                 break;
+            case 1:
+                SpiralBG(position);
+                break;
             default:
                 break;
         }
@@ -35,5 +39,10 @@ public class EventManager : MonoBehaviour
     void SplatterMask(Vector3 position)
     {
         Instantiate(splatterMaskObject, position, Quaternion.identity);
+    }
+
+    void SpiralBG(Vector3 position)
+    {
+        Instantiate(spiralBGObject, position, Quaternion.identity);
     }
 }
