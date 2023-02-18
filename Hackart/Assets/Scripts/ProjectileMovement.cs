@@ -9,7 +9,10 @@ public class ProjectileMovement : MonoBehaviour {
     Vector3 startPos, currPos;
     public bool LHS;
     private float dist;
-	
+	// public void ProjectileMovement(bool LHS){
+    //     this.LHS = LHS;
+    // }
+
     void Start() {
         startPos = transform.position;
         currPos = transform.position;
