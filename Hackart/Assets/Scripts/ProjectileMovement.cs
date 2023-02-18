@@ -3,14 +3,16 @@ using UnityEngine.Events;
 using System.Collections.Generic;
 
 public class ProjectileMovement : MonoBehaviour {
-	
-    public Vector3 targetPos;
+    
     public float speed = 10;
+    private Vector3 targetPos;
     Vector3 startPos, currPos;
 	
     void Start() {
         startPos = transform.position;
         currPos = transform.position;
+        // targetPos should be between the currPos' x and LHS (0)
+        targetPos = new Vector3(Random.Range(transform.position.x,0),Random.Range(-1,3), 0);
     }
 	
     void Update() {
@@ -27,13 +29,14 @@ public class ProjectileMovement : MonoBehaviour {
             transform.rotation = LookAt2D(nextPos - transform.position);
             transform.position = nextPos;
         }
+
+        if (nextPos == targetPos)
+        {
+            Debug.Log("destroying here");
+            // Destroy(gameObject);
+        }
     }
-	
-    void Arrived() {
-        // Destroy(gameObject);
-        // Debug.Log("reached dest");
-    }
-    
+
     static Quaternion LookAt2D(Vector2 forward) {
         return Quaternion.Euler(0, 0, Mathf.Atan2(forward.y, forward.x) * Mathf.Rad2Deg);
     }
