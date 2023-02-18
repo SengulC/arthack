@@ -5,13 +5,13 @@ using UnityEngine;
 public class ClickProjectile : MonoBehaviour
 {
 
-    private ExecuteEvent executeEvent;
+    private EventManager eventManager;
     private Projectile projectile;
 
     // Start is called before the first frame update
     void Start()
     {
-        executeEvent = this.GetComponent<ExecuteEvent>();
+        eventManager = GameObject.FindGameObjectWithTag("EventManager").GetComponent<EventManager>();
         projectile = this.GetComponent<Projectile>();
     }
 
@@ -25,6 +25,6 @@ public class ClickProjectile : MonoBehaviour
     {
         //Debug.Log("clicked on projectile");
 
-        executeEvent.Execute(projectile.projectileCode, this.transform.position);
+        eventManager.ExecuteEvent(projectile.projectileCode, this.transform.position);
     }
 }
