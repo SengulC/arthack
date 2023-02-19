@@ -56,37 +56,32 @@ public class EventManager : MonoBehaviour
     
     void mask(GameObject mask, int projectileCode, Vector3 position)
     {
-        if (projectileCode < 1) // splatter
+        if (projectileCode < 1) // splatter for candy
         {
+            GameObject maskSplatterObject = Instantiate(mask, position, Quaternion.identity);
+
             switch (projectileCode)
             {
                 case 01:
-                    Instantiate(mask, position, Quaternion.identity);
-                    GameObject.Find("splatter").GetComponent<SpriteRenderer>().material.color = colors[0];
+                    maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[0];
                     break;
                 case 02:
-                    Instantiate(mask, position, Quaternion.identity);
-                    GameObject.Find("splatter").GetComponent<SpriteRenderer>().material.color = colors[1];
+                    maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[1];
                     break;
                 case 03:
-                    Instantiate(mask, position, Quaternion.identity);
-                    GameObject.Find("splatter").GetComponent<SpriteRenderer>().material.color = colors[2];
+                    maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[2];
                     break;
                 case 04:
-                    Instantiate(mask, position, Quaternion.identity);
-                    GameObject.Find("splatter").GetComponent<SpriteRenderer>().material.color = colors[3];
+                    maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[3];
                     break;
                 case 05:
-                    Instantiate(mask, position, Quaternion.identity);
-                    GameObject.Find("splatter").GetComponent<SpriteRenderer>().material.color = colors[4];
+                    maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[4];
                     break;
                 case 06:
-                    Instantiate(mask, position, Quaternion.identity);
-                    GameObject.Find("splatter").GetComponent<SpriteRenderer>().material.color = colors[5];
+                    maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[5];
                     break;
                 case 07:
-                    Instantiate(mask, position, Quaternion.identity);
-                    GameObject.Find("splatter").GetComponent<SpriteRenderer>().material.color = colors[6];
+                    maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[6];
                     break;
             }
         }
