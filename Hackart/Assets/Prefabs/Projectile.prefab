@@ -126,6 +126,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileCode: 0
+  sprites:
+  - {fileID: 21300000, guid: df0ec15589a158a4b8cc559a46ba1177, type: 3}
+  - {fileID: 21300000, guid: d78f7d6c6e2a4544abbe7dfb71e895b7, type: 3}
+  - {fileID: 21300000, guid: 08ff433ed4dc61e48bd795d9fab1037d, type: 3}
+  - {fileID: 21300000, guid: 6994bed695324f449a7653c288708a82, type: 3}
+  - {fileID: 21300000, guid: 1a91a4baa4224744abbda2988cadf4e8, type: 3}
+  - {fileID: 21300000, guid: 7244b2782cf48e2489795dd55d5dbdd4, type: 3}
+  - {fileID: 21300000, guid: dfc986d1785a8704fae16bdfdd2028fd, type: 3}
+  - {fileID: 21300000, guid: 73f61fcf0c4b2414e89db887b73b6356, type: 3}
+  - {fileID: 21300000, guid: 0b6e756209efcdf4fb748cab377b1bf5, type: 3}
+  - {fileID: 21300000, guid: e8671024f4414364eb1ef15b7500d4bc, type: 3}
+  - {fileID: 21300000, guid: 22f3b3e6529cf70479b8a4740cc58aa0, type: 3}
+  projectileCodes: 00000000
 --- !u!114 &1529758101258419297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,3 +164,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  LHS: 0
