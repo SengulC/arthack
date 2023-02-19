@@ -9,6 +9,9 @@ public class Splatter : MonoBehaviour
     public List<Sprite> maskSprites;
     public SpriteRenderer childSpriteRenderer;
 
+    public float fadeRate;
+    public bool keepFading = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +24,22 @@ public class Splatter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Color oldColour = childSpriteRenderer.material.color;
+
+        if (keepFading)
+        {
+            
+            childSpriteRenderer.material.color = new Color(oldColour.r, oldColour.g, oldColour.b, oldColour.a - fadeRate * Time.deltaTime);
+        }
+        else
+        {
+
+        }
+
+        if (oldColour.a <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     void ChooseSplatter()

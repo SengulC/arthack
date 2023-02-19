@@ -17,7 +17,7 @@ public class ProjectileMovement : MonoBehaviour {
         startPos = transform.position;
         currPos = transform.position;
         // targetPos should be between the currPos' x and LHS (0)
-        targetPos = new Vector3(Random.Range(transform.position.x,0),Random.Range(-2,5), 0);
+        targetPos = new Vector3(Random.Range(transform.position.x,0),Random.Range(1,6), 0);
     }
 	
     void Update() {

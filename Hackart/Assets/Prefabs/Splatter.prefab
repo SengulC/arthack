@@ -238,3 +238,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: da4c2555b98ec414983d7280abddf360, type: 3}
   - {fileID: 21300000, guid: 0ea4eeb5c52c1aa44953500de5bd5d30, type: 3}
   childSpriteRenderer: {fileID: 4094266689204011180}
+  fadeRate: 0.03
+  keepFading: 1

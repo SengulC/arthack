@@ -50,12 +50,14 @@ public class EventManager : MonoBehaviour
     // instantiate: splatter, -spiral, -tearmask, gorysprite
     void SpiralBG(Vector3 position)
     {
+        //Instantiate(spiralBGObject, position, Quaternion.identity);
+        //Instantiate(spiralBGObject, position, Quaternion.identity);
         Instantiate(spiralBGObject, position, Quaternion.identity);
     }
     
     void mask(GameObject mask, int projectileCode, Vector3 position)
     {
-        if (projectileCode > 4) // splatter for candy
+        if (projectileCode >= 4) // splatter for candy
         {
             GameObject maskSplatterObject = Instantiate(mask, position, Quaternion.identity);
 

@@ -27,26 +27,52 @@ public class Projectile : MonoBehaviour
     {
         int rand = Random.Range(0, 100);
 
-        if (rand <= 5)
+        //if (rand <= 5)
+        //{
+        //    //scream tear
+        //    projectileCode = 1;
+        //}
+        //else if (rand <= 12.5)
+        //{
+        //    //monalisa
+        //    projectileCode = 2;
+        //}
+        //else if (rand <= 20)
+        //{
+        //    //pearl
+        //    projectileCode = 3;
+        //}
+        //else if (rand <= 30)
+        //{
+        //    //starry night spiral
+        //    projectileCode = 0;
+        //}
+        //else
+        //{
+        //    //candy
+        //    projectileCode = Random.Range(4, 10);
+        //}
+
+        if (rand >= 95)
         {
             //scream tear
-            projectileCode = 1;
+            projectileCode = 3;
         }
-        else if (rand <= 12.5)
+        else if (rand >= 90)
         {
             //monalisa
             projectileCode = 2;
         }
-        else if (rand <= 20)
+        else if (rand >= 70)
         {
             //pearl
-            projectileCode = 3;
-        }
-        else if (rand <= 30)
-        {
-            //starry night spiral
             projectileCode = 0;
         }
+        //else if (rand <= 30)
+        //{
+        //    //starry night spiral
+        //    projectileCode = 0;
+        //}
         else
         {
             //candy
