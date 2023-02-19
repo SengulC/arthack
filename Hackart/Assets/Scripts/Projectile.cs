@@ -25,13 +25,13 @@ public class Projectile : MonoBehaviour
         {
             //spiralBG projectile
             projectileCode = 1;
-            this.GetComponent<MeshRenderer>().material.color = Color.blue;
+            this.GetComponent<SpriteRenderer>().material.color = Color.blue;
         }
         else
         {
             //paint projectile
             projectileCode = 0;
-            this.GetComponent<MeshRenderer>().material.color = Color.red;
+            this.GetComponent<SpriteRenderer>().material.color = Color.red;
         }
 
         Debug.Log(rand);
