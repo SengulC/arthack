@@ -22,7 +22,12 @@ public class Projectile : MonoBehaviour
 
     void DetermineProjectileCode()
     {
-        float rand = Random.Range(0, 10);
+        int rand = Random.Range(0, 10);
+        switch (rand)
+        {
+            case 0:
+                
+        }
         if (rand >= 7)
         {
             //spiralBG projectile
