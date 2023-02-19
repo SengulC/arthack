@@ -641,7 +641,7 @@ PrefabInstance:
       objectReference: {fileID: 1888138990}
     - target: {fileID: 4591611299524983590, guid: 440c72c6121bb43349e8ca6fe816288d, type: 3}
       propertyPath: m_Name
-      value: ProjectileManager RHS
+      value: PJ MGR RHS
       objectReference: {fileID: 0}
     - target: {fileID: 4591611299524983591, guid: 440c72c6121bb43349e8ca6fe816288d, type: 3}
       propertyPath: m_RootOrder
@@ -710,7 +710,7 @@ PrefabInstance:
       objectReference: {fileID: 1888138990}
     - target: {fileID: 4591611299524983590, guid: 440c72c6121bb43349e8ca6fe816288d, type: 3}
       propertyPath: m_Name
-      value: ProjectileManager LHS
+      value: PJ MGR LHS
       objectReference: {fileID: 0}
     - target: {fileID: 4591611299524983591, guid: 440c72c6121bb43349e8ca6fe816288d, type: 3}
       propertyPath: m_RootOrder
