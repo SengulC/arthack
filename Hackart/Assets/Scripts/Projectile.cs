@@ -6,6 +6,8 @@ public class Projectile : MonoBehaviour
 {
     public int projectileCode;
 
+    public List<Sprite> projectileSprites;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +35,5 @@ public class Projectile : MonoBehaviour
             projectileCode = 0;
             this.GetComponent<SpriteRenderer>().material.color = Color.red;
         }
-
-        Debug.Log(rand);
     }
 }
