@@ -27,19 +27,18 @@ public class EventManager : MonoBehaviour
     public void ExecuteEvent(int projectileCode, Vector3 position)
     {
         Debug.Log("Clicked and executed " + projectileCode + " successfully at " + position.x);
-        bool gore = projectileCode > 3;
         switch (projectileCode)
         {
-            case 1:
+            case 0:
                 SpiralBG(position);
                 break;
-            case 2:
+            case 1:
                 mask(tearMaskObject, projectileCode, position);
                 break;
-            case 30:
+            case 2:
                 gory(projectileCode, position);
                 break;
-            case 31:
+            case 3:
                 gory(projectileCode, position);
                 break;
             default:
@@ -56,31 +55,31 @@ public class EventManager : MonoBehaviour
     
     void mask(GameObject mask, int projectileCode, Vector3 position)
     {
-        if (projectileCode < 1) // splatter for candy
+        if (projectileCode > 4) // splatter for candy
         {
             GameObject maskSplatterObject = Instantiate(mask, position, Quaternion.identity);
 
             switch (projectileCode)
             {
-                case 01:
+                case 4:
                     maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[0];
                     break;
-                case 02:
+                case 5:
                     maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[1];
                     break;
-                case 03:
+                case 6:
                     maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[2];
                     break;
-                case 04:
+                case 7:
                     maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[3];
                     break;
-                case 05:
+                case 8:
                     maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[4];
                     break;
-                case 06:
+                case 9:
                     maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[5];
                     break;
-                case 07:
+                case 10:
                     maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[6];
                     break;
             }
@@ -95,7 +94,7 @@ public class EventManager : MonoBehaviour
     // instantiate dead mona lisa or girl w pearl depending on code
     void gory(int projectileCode, Vector3 position)
     {
-        if (projectileCode == 30) 
+        if (projectileCode == 2) 
         {
             Instantiate(deadPortraits[0], position, Quaternion.identity);
         }
