@@ -18,7 +18,7 @@ public class ClickProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Destroy(this.gameObject, 3);
     }
 
     void OnMouseDown()
@@ -26,5 +26,7 @@ public class ClickProjectile : MonoBehaviour
         //Debug.Log("clicked on projectile");
 
         eventManager.ExecuteEvent(projectile.projectileCode, this.transform.position);
+
+        Destroy(this.gameObject);
     }
 }

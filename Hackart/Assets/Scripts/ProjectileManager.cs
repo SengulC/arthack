@@ -16,7 +16,7 @@ public class ProjectileManager : MonoBehaviour
      void Start ()
      {
          name = LHS ? "Projectile LHS" : "Projectile RHS";
-         projectile = GameObject.Find(name);
+         //projectile = GameObject.Find(name);
          // projectile = GameObject.Find("projectile");
      }
      
@@ -27,9 +27,12 @@ public class ProjectileManager : MonoBehaviour
          {
         location = new Vector3(Random.Range(minX, maxX), -4, 0);
         // newProjectClone = new ProjectileMovement(true);
-            projectileClone = Instantiate(projectile, location, transform.rotation);
-            Destroy(projectile,3);
-            projectile = projectileClone;
+            //projectileClone = 
+            Instantiate(projectile, location, transform.rotation);
+            //if (projectileClone != null) {
+            //    Destroy(projectileClone,3);
+            //}
+            //projectileClone = projectile;
             //  while (projectile.transform.position.y < -4.5)
             //  {
             //     Destroy(projectile);
@@ -39,16 +42,16 @@ public class ProjectileManager : MonoBehaviour
          }
      }
 
-     void CleanupProjectiles()
-     {
-         projectiles = GameObject.FindGameObjectsWithTag("projectile");
+     //void CleanupProjectiles()
+     //{
+     //    projectiles = GameObject.FindGameObjectsWithTag("projectile");
          
-         foreach (GameObject pj in projectiles)
-         {
-             if (pj.transform.position.y < -4.5)
-             {
-                 Destroy(pj);
-             }
-         }
-     }
+     //    foreach (GameObject pj in projectiles)
+     //    {
+     //        if (pj.transform.position.y < -4.5)
+     //        {
+     //            Destroy(pj);
+     //        }
+     //    }
+     //}
  }

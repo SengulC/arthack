@@ -126,7 +126,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4094266689204011182}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -237,4 +237,4 @@ MonoBehaviour:
   maskSprites:
   - {fileID: 21300000, guid: da4c2555b98ec414983d7280abddf360, type: 3}
   - {fileID: 21300000, guid: 0ea4eeb5c52c1aa44953500de5bd5d30, type: 3}
-  childSpriteRenderer: {fileID: 2054459042}
+  childSpriteRenderer: {fileID: 4094266689204011180}

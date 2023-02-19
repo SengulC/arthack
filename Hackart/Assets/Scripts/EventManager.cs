@@ -59,28 +59,36 @@ public class EventManager : MonoBehaviour
         {
             GameObject maskSplatterObject = Instantiate(mask, position, Quaternion.identity);
 
+            Debug.Log(projectileCode);
+
             switch (projectileCode)
             {
                 case 4:
-                    maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[0];
+                    maskSplatterObject.GetComponentInChildren<SpriteRenderer>().material.color = colors[0];
                     break;
                 case 5:
-                    maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[1];
+                    Debug.Log(5);
+                    maskSplatterObject.GetComponentInChildren<SpriteRenderer>().material.color = colors[1];
                     break;
                 case 6:
-                    maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[2];
+                    Debug.Log(6);
+                    maskSplatterObject.GetComponentInChildren<SpriteRenderer>().material.color = colors[2];
                     break;
                 case 7:
-                    maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[3];
+                    Debug.Log(7);
+                    maskSplatterObject.GetComponentInChildren<SpriteRenderer>().material.color = colors[3];
                     break;
                 case 8:
-                    maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[4];
+                    Debug.Log(8);
+                    maskSplatterObject.GetComponentInChildren<SpriteRenderer>().material.color = colors[4];
                     break;
                 case 9:
-                    maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[5];
+                    Debug.Log(9);
+                    maskSplatterObject.GetComponentInChildren<SpriteRenderer>().material.color = colors[5];
                     break;
                 case 10:
-                    maskSplatterObject.GetComponent<Splatter>().childSpriteRenderer.material.color = colors[6];
+                    Debug.Log(10);
+                    maskSplatterObject.GetComponentInChildren<SpriteRenderer>().material.color = colors[6];
                     break;
             }
         }
