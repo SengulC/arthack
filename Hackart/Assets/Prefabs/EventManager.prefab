@@ -45,4 +45,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   splatterMaskObject: {fileID: 4094266689204011182, guid: c4c5c5f1dea633446a5c0f58b6e17f82, type: 3}
+  candies:
+  - {fileID: 4217910545161006228, guid: 966dd349b3a57b242a80503b5fadd3f5, type: 3}
+  - {fileID: 8151995641972370198, guid: 4c59e64201e74ab4db4d53ba8ee64464, type: 3}
+  - {fileID: 754798555612845317, guid: 678532077191adf419b754502698cfef, type: 3}
+  - {fileID: 2497347839658735363, guid: ef1ebe1f69e71614c9792059fc863145, type: 3}
+  - {fileID: 4768551350338882773, guid: 12823505d72364041a510bd40ba942cc, type: 3}
+  - {fileID: 2266351437465540824, guid: 0a8c473b01dc2af44913d44a013d6d10, type: 3}
+  - {fileID: 5133495440042152838, guid: eb225e158bfc8ae468a0d8391be7caf2, type: 3}
+  colors:
+  - {r: 0.048288822, g: 1, b: 0, a: 0.5882353}
+  - {r: 1, g: 0.29874206, b: 0.7432666, a: 0.5882353}
+  - {r: 1, g: 0.42523107, b: 0, a: 0.5882353}
+  - {r: 1, g: 0.33647794, b: 0.970673, a: 0.5882353}
+  - {r: 0.9960785, g: 0.7137255, b: 0.121568635, a: 0.5882353}
+  - {r: 0.13993701, g: 0.2854714, b: 0.8396226, a: 0.5882353}
+  - {r: 1, g: 0, b: 0, a: 0.5882353}
+  scream: {fileID: 881635186017782362, guid: 8846d5719235634429cf9eac54beb853, type: 3}
+  deadPortraits:
+  - {fileID: 881635186017782362, guid: 8846d5719235634429cf9eac54beb853, type: 3}
+  - {fileID: 1456806955433843590, guid: 1bc845d21f85e7f4fa07d2db4ceda64b, type: 3}
   spiralBGObject: {fileID: 2356212922989089080, guid: 67807ec1a64dce047befa957b6146b6b, type: 3}
+  tearMaskObject: {fileID: 5306782510988538892, guid: e75d708af4830654c9fb71d51a1ddda8, type: 3}

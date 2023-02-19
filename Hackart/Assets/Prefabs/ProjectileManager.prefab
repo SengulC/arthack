@@ -46,4 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   timer: 5
-  projectile: {fileID: 0}
+  projectile: {fileID: 1529758101258419303, guid: 77969777362ec491581cd9e36302c3a8, type: 3}
+  minX: 0
+  maxX: 0
+  LHS: 0

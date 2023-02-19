@@ -6,15 +6,15 @@ public class Projectile : MonoBehaviour
 {
     public int projectileCode;
     public List<Sprite> sprites;
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
-    public List<int> projectileCodes;
+    //public List<int> projectileCodes;
 
     // Start is called before the first frame update
     void Start()
     {   
         DetermineProjectileCode();
-        spriteRenderer = this.GetComponent<SpriteRenderer>();
+        spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
